@@ -2,8 +2,6 @@ import React from 'react';
 import './App.scss';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import Home from './components/home/Home';
-// import About from './components/about/Profile';
 import Ai from './components/ai/Ai';
 import Tools from './components/tools/Tools';
 import Articles from './components/articles/Articles';
@@ -24,10 +22,8 @@ import {
 import 'tailwindcss/tailwind.css';
 
 import Sidebar, { SidebarItem } from './components/sidebar/Sidebar';
-// import { Link } from 'react-router-dom';
 import Header from './components/header/Header';
 import MainWorkout from './components/workouts/MainWorkout';
-// import Chest from './components/workouts/chest/ChestWorkouts';
 import ChestWorkouts from './components/workouts/chest/ChestWorkouts';
 import Biceps from './components/workouts/biceps/Biceps';
 import Shoulders from './components/workouts/shoulders/Shoulders';
@@ -49,12 +45,8 @@ import Recipes from './components/Recipes';
 import MealPlanning from './components/MealPlanning';
 import WorkoutDirectory from './components/workouts/WorkoutDirectory';
 import AuthPopup from './components/workouts/authpopup/AuthPopup';
-// import Profile from './components/about/Profile';
-// import AiwithImage from './components/ai/AiwithImage';
 import PythonML from './components/pythonwala/PythonML';
-// import AIChatbot from './components/ai/AIchatbot';
 
-// import AiwithImage from './components/ai/AiwithImage';
 
 
 const App = () => {
@@ -86,10 +78,7 @@ const App = () => {
             <Route path="/ai-diet/*" element={<Ai />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/articles" element={<Articles />} />
-            <Route path="/aiimg" element={<AiwithImage />} />
-            <Route path="/aichat" element={<AIChatbot />} />
-            <Route path="/cardio" element= {<CardioWorkouts/>}/>
-           
+            <Route path="/cardio" element= {<CardioWorkouts/>}/>           
             <Route path="/workout" element={<PythonML />} />
             <Route path="/workout/chest" element={<ChestWorkouts/>} />
             <Route path="/workout/biceps" element={<Biceps/>} />
