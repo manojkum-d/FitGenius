@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/home/Home';
+// import Home from './components/home/Home';
 // import About from './components/about/Profile';
 import Ai from './components/ai/Ai';
 import Tools from './components/tools/Tools';
