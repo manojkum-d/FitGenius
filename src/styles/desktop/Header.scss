@@ -1,0 +1,81 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+header{
+    // position: sticky;
+    top: 0  ;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    @include flex(row, center, space-between);
+    padding: 0 4rem;
+    z-index: 10;
+
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+
+    .logo{
+        h1{
+            color: $orange;
+            position: relative;
+            top: -2px;
+            font-family: $courgette;
+            font-size: 26px;
+            font-weight: light;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.menu-button{
+    display: none;
+}
+
+.menu{
+    @include flex(row, center, center);
+    position: relative;
+    left: -47.5px;
+
+    a{
+        padding: 0 1.5rem;
+        font-size: $desktopSmallText;
+        font-family: $poppins;
+        font-weight: 500;
+        transition: all .1s linear;
+    }
+    a:hover{
+        color: $orange;
+    }
+}
+
+.favorites{
+    @include flex(row, center, flex-end);
+
+   a{
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        @include border;
+        @include centerElements;
+        
+        opacity: .875;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all .05s;
+
+        svg{
+            position: absolute;
+            transform: translateY(-2%);
+            height: 16px;
+            color: $orange;
+        }
+    }
+    a:hover{
+        opacity: 1;
+    }
+}

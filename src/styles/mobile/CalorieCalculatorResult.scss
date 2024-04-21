@@ -1,0 +1,48 @@
+@import '../partials/variables';
+
+@media (max-width: 768px) {
+    .calorie-calculator-result {
+        padding: 2.5rem 1rem;
+
+        h2 {
+            font-size: $mobileHeading;
+            margin-bottom: 1.25rem;
+        }
+        
+        .scroll-ref {
+            top: -35px;
+        }
+    }
+
+    .results {
+
+        .result-item {
+            height: 60px;
+            border-radius: 16px;
+            margin-bottom: .75rem;
+
+            .goal {
+                border-radius: 15px;
+                .title {
+                    font-size: 16px;
+                }
+
+                .weight {
+                    font-size: 10px;
+                }
+            }
+
+            .calories {
+                width: 180px;
+
+                .text-1 {
+                    font-size: 14px;
+                }
+
+                .text-2 {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}

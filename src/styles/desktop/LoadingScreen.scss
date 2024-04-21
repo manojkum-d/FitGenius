@@ -1,0 +1,19 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+
+.loading-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    width: 100vw;
+    height: 100vh;
+    @include centerElements;
+    background-color: $offWhite;
+
+    h1{
+        font-family: $courgette;
+        color: $orange;
+        letter-spacing: 2px;
+    }
+}

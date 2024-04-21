@@ -1,0 +1,25 @@
+@import './variables';
+
+@mixin centerElements{
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex($direction: 'row', $alignItems: 'flex-start', $justifyContent: 'flex-start'){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin border($color: $orange, $width: 2px){
+    border: $width solid $color;
+}
+
+@mixin dropDownShadow($opacity: 0.2){
+    box-shadow: 0px 8px 25px rgba(84, 84, 84, $opacity);
+}
+
+@mixin dropDownShadowHover{
+    box-shadow: -5px 8px 25px rgba(39, 39, 39, 0.25);
+}

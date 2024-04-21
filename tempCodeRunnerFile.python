@@ -1,0 +1,45 @@
+import pandas as pd
+from mlxtend.frequent_patterns import apriori, association_rules
+
+# Hardcoded fitness products (replace with your actual items)
+fitness_products = {
+    "transaction_1": ["Protein Powder", "Yoga Mat", "Water Bottle"],
+    "transaction_2": ["Running Shoes", "Jump Rope", "Fitness Tracker"],
+    "transaction_3": ["Protein Powder", "Gym Bag", "Resistance Bands"],
+    "transaction_4": ["Running Shoes", "Yoga Mat", "Water Bottle"],
+    "transaction_5": ["Jump Rope", "Gym Bag", "Fitness Tracker"],
+}
+
+# Convert transactions to a list of itemsets
+transactions = list(fitness_products.values())
+
+# Define minimum support count (adjust as needed)
+min_support = 0.3  # Consider adjusting based on number of transactions
+
+# Apply Apriori algorithm
+itemsets_frequent = apriori(transactions, min_support=min_support)
+
+# Get the frequent itemsets with support counts
+frequent_itemsets_with_support = itemsets_frequent[["itemsets", "support"]]
+
+# Display frequent itemsets and their support counts
+print("Frequent Itemsets (with support):")
+print(frequent_itemsets_with_support.to_string(index=False))
+
+# Optional: Generate association rules with minimum confidence
+min_confidence = 0.5  # Adjust as needed
+
+if len(frequent_itemsets_with_support) > 1:  # Check if enough itemsets for rules
+    rules = association_rules(
+        frequent_itemsets_with_support, metric="confidence", min_threshold=min_confidence
+    )
+
+    # Sort rules by confidence in descending order
+    rules = rules.sort_values(by=["confidence"], ascending=False)
+
+    # Display association rules (if generated)
+    print("\nAssociation Rules (with confidence):")
+    print(rules[["antecedents", "consequents", "confidence"]].to_string(index=False))
+else:
+    print("\nNot enough frequent itemsets to generate association rules.")
+

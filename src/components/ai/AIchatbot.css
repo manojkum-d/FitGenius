@@ -1,0 +1,195 @@
+.message.user {
+  align-self: flex-end;
+  background-color: #bdc2ce;
+  color: #000;
+}
+
+.message.user p {
+  color: #000;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #00d3f8;
+  color: #fff;
+}
+
+.message.ai p {
+  color: #000000;
+}
+
+.time {
+  font-size: 12px;
+  color: #000000;
+}
+
+.time.user {
+  color: #000;
+}
+
+.input-box {
+  margin-top: 10px;
+}
+
+/* Updated styles for dark mode and full screen */
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #000000;
+}
+
+.chat-window {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: #2c2c2c; */
+  background-color: white;
+
+  padding: 20px;
+}
+
+.chat-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #616060;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Full Screen */
+.full-screen .chat-window {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Additional styles for header */
+.header {
+  text-align: center;
+  /* background-color: #333; */
+  color: #000000;
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#chat-header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.message-text {
+  color: #000000;
+}/* Add this CSS to your stylesheets */
+
+.header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 img {
+  width: 100px;
+  height: auto;
+}
+
+.chat-window {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chat-container {
+  height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.user {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+
+.message.ai {
+  background-color: #d1ecf1;
+  align-self: flex-end;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.time {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+.time.user {
+  text-align: left;
+}
+
+.time.ai {
+  text-align: right;
+}
+
+.input-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.input-box input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-box button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
