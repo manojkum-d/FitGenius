@@ -49,10 +49,10 @@ import Recipes from './components/Recipes';
 import MealPlanning from './components/MealPlanning';
 import WorkoutDirectory from './components/workouts/WorkoutDirectory';
 import AuthPopup from './components/workouts/authpopup/AuthPopup';
-import Profile from './components/about/Profile';
-import AiwithImage from './components/ai/AiwithImage';
+// import Profile from './components/about/Profile';
+// import AiwithImage from './components/ai/AiwithImage';
 import PythonML from './components/pythonwala/PythonML';
-import AIChatbot from './components/ai/AIchatbot';
+// import AIChatbot from './components/ai/AIchatbot';
 
 // import AiwithImage from './components/ai/AiwithImage';
 
